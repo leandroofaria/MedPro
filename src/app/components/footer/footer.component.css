@@ -1,0 +1,40 @@
+/* Estilizando o footer */
+footer {
+    background-color: whitesmoke;
+    color: black;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+  }
+  
+  /* Estilizando o conteúdo do footer */
+  .footer-content {
+    text-align: center;
+  }
+  
+  
+  /* Estilizando a lista de contato */
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Estilizando os itens da lista de contato */
+  .contact-list li {
+    margin: 5px; /* Reduzindo o espaçamento entre os itens */
+  }
+  
+  /* Estilizando links de contato */
+  .contact-list a {
+    text-decoration: none;
+    color: #000; /* Alterando a cor do texto para preto */
+    transition: 0.5s;
+  }
+  
+  /* Estilizando links de contato ao passar o mouse */
+  .contact-list a:hover {
+    color: #dff6ff;
+  }
+  

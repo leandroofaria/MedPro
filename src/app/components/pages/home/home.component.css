@@ -1,0 +1,47 @@
+/* Estilizando a seção principal */
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+}
+
+/* Estilizando a imagem */
+.main-section img {
+    max-width: 50%; /* Definir uma largura máxima para a imagem */
+    border-radius: 10px;
+    height: auto;
+}
+
+/* Estilizando o texto */
+.text-section {
+    flex: 1; /* O texto ocupa todo o espaço disponível restante */
+    padding: 0 1rem; /* Adicione um pouco de preenchimento para espaçamento */
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Estilizando a seção de botões */
+.button-section {
+    display: flex; /* Use flexbox para alinhar os botões lado a lado */
+    justify-content: left; /* Centralize os botões horizontalmente */
+    margin-top: 1rem; /* Adicione um espaçamento superior entre o texto e os botões */
+}
+
+/* Estilizando os links */
+.button-section a {
+    position: left;
+    margin: 0 5px; /* Adicione um espaçamento entre os botões */
+    text-decoration: none; /* Remova a decoração do link */
+    color: white; /* Cor dos botões */
+    padding: 10px; /* Adicione padding para uma aparência mais agradável */
+    border-radius: 5px; /* Adicione borda arredondada */
+    background-color: #1363df; /* Cor de fundo dos botões */
+    transition: all 0.3s ease; /* Adicione uma transição suave */
+}
+
+/* Estilizando os botões ao passar o mouse */
+.button-section a:hover {
+    background-color: #47b5ff; /* Mude a cor de fundo ao passar o mouse */
+    color: white; /* Mude a cor do texto ao passar o mouse */
+}
