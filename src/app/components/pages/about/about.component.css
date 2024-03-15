@@ -1,0 +1,45 @@
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+    flex-direction: column;
+}
+
+/* Estilizando o texto */
+.text-section {
+    text-align: justify;
+    font-size: 1.5rem;
+    font-weight: 500;
+    max-width: 800px; /* Controla a largura máxima do texto */
+
+    margin-bottom: 2rem;
+}
+
+.text-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilizando a seção de botões */
+.button-section {
+    display: flex;
+    justify-content: flex-start; /* Botões alinhados à esquerda */
+}
+
+/* Estilizando os links */
+.button-section a {
+    margin-top: 2rem; /* Adicione um espaçamento entre os botões */
+    text-decoration: none; /* Remova a decoração do link */
+    color: white; /* Cor dos botões */
+    padding: 10px 20px; /* Adicione padding para uma aparência mais agradável */
+    border-radius: 5px; /* Adicione borda arredondada */
+    background-color: #1363df; /* Cor de fundo dos botões */
+    transition: all 0.3s ease; /* Adicione uma transição suave */
+}
+
+/* Estilizando os botões ao passar o mouse */
+.button-section a:hover {
+    background-color: #47b5ff; /* Mude a cor de fundo ao passar o mouse */
+}
