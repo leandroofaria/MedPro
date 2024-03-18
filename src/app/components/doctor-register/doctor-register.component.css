@@ -1,0 +1,78 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:80vh;
+    background: url('src/assets/img/medico-register.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.wrapper {
+    margin: 1rem;
+    background: transparent;
+    border: 2px solid whitesmoke;
+    backdrop-filter: blur(40px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    color: #FFFF;
+    width: 300px;
+    border-radius: 10px;
+    padding: 50px 70px;
+}
+
+.wrapper h1 {
+    font-size: 24px;
+    text-align: center;
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.endereco {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #1363df;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #1363df;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
