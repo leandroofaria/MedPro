@@ -1,0 +1,44 @@
+<section class="container criar-pensmamentos">
+    <header class="header">
+        <h2>Agende uma consulta nova:</h2>
+    </header>
+
+    <form action="">
+        <label for="especialidade">Especialidade</label>
+        <input type="textarea" 
+        class="input" 
+        id="especialidade"
+        name="especialidade"
+        placeholder="Especialidade do médico"
+        [value]="consulta.especialidade">
+
+        <label for="doutor">Doutor (a)</label>
+        <input type="text" 
+        class="input" 
+        id="doutor"
+        name="doutor"
+        placeholder="Doutor (a)"
+        [value]="consulta.doutor">
+
+        <label for="data_consulta">Data da consulta</label>
+        <input type="date" 
+        class="input" 
+        id="data_consulta"
+        name="data_consulta"
+       [value]="formatarData(consulta.data)">
+
+       <label for="horario">Horário</label>
+       <input type="time" 
+        class="input"
+        id="horario"
+        name="horario"
+        [value]="formatarHorario(consulta.horario)">
+        
+    </form>
+
+    <div class="acoes">
+        <button class="botao">Agendar</button>
+        <button class="botao" routerLink="/patienthome">Cancelar</button>
+    </div>
+
+</section>
