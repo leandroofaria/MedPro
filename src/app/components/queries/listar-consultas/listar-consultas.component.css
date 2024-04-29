@@ -1,13 +1,45 @@
-.consultaCard,
-.exameCard {
-    background-color: #f8f9fa; 
-    padding: 10px; 
-    border-radius: 5px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    margin-bottom: 10px; 
-    display: inline-block;
-    box-sizing: border-box; 
-    min-width: 150px; 
-    max-width: 100%; 
-    margin-right: 10px;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.header {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    margin: 10px;
+}
+
+.botao {
+    margin: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.consultas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.consulta-card {
+    border-radius: 5px;
+    padding: 15px;
+}
+
+
+.sem-consultas {
+    width: 100%;
+    margin: 10px;
+}
+
+.sem-consultas p {
+    font-size: 18px;
+    color: #555;
 }

@@ -1,12 +1,17 @@
 <section class="container">
     <h1>Bem vindo (nome)</h1>
     <header class="header">
-        <h2>Minhas consultas:</h2>]
+        <h2>Suas consultas:</h2>
         <button class="botao" routerLink="/agendarconsulta">Agendar consulta</button>
     </header>
-    <div class="consultas">
-        <div *ngFor="let consulta of listaConsultas">
-            <app-consulta></app-consulta>
+    <div class="consultas" *ngIf="listaConsultas.length > 0; else semConsultas">
+        <div *ngFor="let consulta of listaConsultas" class="consulta-card">
+            <app-consulta [consulta]="consulta"></app-consulta>
         </div>
     </div>
 </section>
+<ng-template #semConsultas>
+    <div class="sem-consultas">
+        <p>Você não possui consultas agendadas.</p>
+    </div>
+</ng-template>
