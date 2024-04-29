@@ -12,6 +12,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { PatienthomeComponent } from './components/pages/patienthome/patienthome.component';
 import { ComponentsComponent } from './components/components.component';
 import { AgendarConsultaComponent } from './components/queries/agendar-consulta/agendar-consulta.component';
+import { FormsModule } from '@angular/forms';
+import { ListarConsultasComponent } from './components/queries/listar-consultas/listar-consultas.component';
+import { ConsultaComponent } from './components/queries/consulta/consulta.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,14 @@ import { AgendarConsultaComponent } from './components/queries/agendar-consulta/
     RegisterComponent,
     PatienthomeComponent,
     ComponentsComponent,
-    AgendarConsultaComponent
+    AgendarConsultaComponent,
+    ListarConsultasComponent,
+    ConsultaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

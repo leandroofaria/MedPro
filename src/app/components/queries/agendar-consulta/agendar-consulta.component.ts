@@ -27,4 +27,8 @@ export class AgendarConsultaComponent {
     return horarioFormatado;
   }
 
+  agendarConsulta() {
+    alert('Nova consulta')
+  }
+
 }

@@ -10,7 +10,7 @@
         id="especialidade"
         name="especialidade"
         placeholder="Especialidade do médico"
-        [value]="consulta.especialidade">
+        [(ngModel)]="consulta.especialidade">
 
         <label for="doutor">Doutor (a)</label>
         <input type="text" 
@@ -18,26 +18,32 @@
         id="doutor"
         name="doutor"
         placeholder="Doutor (a)"
-        [value]="consulta.doutor">
+        [(ngModel)]="consulta.doutor">
 
         <label for="data_consulta">Data da consulta</label>
         <input type="date" 
         class="input" 
         id="data_consulta"
         name="data_consulta"
-       [value]="formatarData(consulta.data)">
+        [(ngModel)]="consulta.data" 
+        [ngModelOptions]="{standalone: true}" 
+        (ngModelChange)="consulta.data = 
+        formatarData($event)">
 
        <label for="horario">Horário</label>
        <input type="time" 
         class="input"
         id="horario"
         name="horario"
-        [value]="formatarHorario(consulta.horario)">
-        
+        [(ngModel)]="consulta.horario" 
+        [ngModelOptions]="{standalone: true}" 
+        (ngModelChange)="consulta.horario = 
+        formatarData($event)">
+
     </form>
 
     <div class="acoes">
-        <button class="botao">Agendar</button>
+        <button (click)="agendarConsulta()" class="botao">Agendar</button>
         <button class="botao" routerLink="/patienthome">Cancelar</button>
     </div>
 
