@@ -1,5 +1,5 @@
 export interface Consulta {
-    id: number
+    id?: number
     especialidade: string
     doutor: string
     data: string

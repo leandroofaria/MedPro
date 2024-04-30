@@ -16,7 +16,10 @@ export class ConsultaServiceService {
     return this.http.get<Consulta[]>(this.API)
   }
 
-  
+
+  criar(consulta: Consulta): Observable<Consulta> {
+    return this.http.post<Consulta>(this.API, consulta)
+  }
 
   
 }

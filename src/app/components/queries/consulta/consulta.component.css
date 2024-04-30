@@ -32,9 +32,10 @@
     background-color: #dc3545;
     color: #fff;
     border: none;
-    padding: 6px 10px; /* Reduzi o padding do botão para melhorar a usabilidade */
+    padding: 6px 10px; 
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 1rem;
 }
 
 .consulta .botao-excluir:hover {

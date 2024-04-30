@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Consulta } from '../consultaInterface';
+import { ConsultaServiceService } from '../consulta-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-agendar-consulta',
@@ -9,27 +11,21 @@ import { Consulta } from '../consultaInterface';
 export class AgendarConsultaComponent {
 
   consulta: Consulta = {
-    id: 1,
-    especialidade: 'Cardiologista',
-    doutor: 'Pedro',
-    data: '03/04/2024',
-    horario: '13:22'
+    especialidade: '',
+    doutor: '',
+    data: '',
+    horario: ''
   }
 
-  formatarData(data: string): string {
-    const partesData = data.split('/');
-    const dataFormatada = `${partesData[2]}-${partesData[1]}-${partesData[0]}`;
-    return dataFormatada;
-  }
+  constructor(
+    private service: ConsultaServiceService,
+    private router: Router
+  ) {}
 
-  formatarHorario(horario: string): string {
-    const partesHorario = horario.split(':');
-    const horarioFormatado = `${partesHorario[0]}:${partesHorario[1]}`;
-    return horarioFormatado;
-  }
+  
 
   agendarConsulta() {
-    alert('Nova consulta')
+    this.service.criar(this.consulta).subscribe(() => this.router.navigate(['/listarconsulta'] ))
   }
 
 }
