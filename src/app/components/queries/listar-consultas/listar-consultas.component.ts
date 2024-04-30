@@ -1,45 +1,25 @@
-  import { Component } from '@angular/core';
+  import { Component, OnInit } from '@angular/core';
+import { Consulta } from '../consultaInterface';
+import { ConsultaServiceService } from '../consulta-service.service';
 
   @Component({
     selector: 'app-listar-consultas',
     templateUrl: './listar-consultas.component.html',
     styleUrls: ['./listar-consultas.component.css']
   })
+
   export class ListarConsultasComponent {
 
-    listaConsultas = [
-        {id: '1',
-        especialidade: 'Cardiologista',
-        doutor: 'Pedro',
-        data: '03/04/2024',
-        horario: '13:22'},
-        
-        {id: '2',
-        especialidade: 'Endocrino',
-        doutor: 'Joao',
-        data: '12/05/2024',
-        horario: '18:22'}, 
+    listaConsultas: Consulta[] = []
 
-        {id: '1',
-        especialidade: 'Cardiologista',
-        doutor: 'Pedro',
-        data: '03/04/2024',
-        horario: '13:22'},
+    constructor(private service: ConsultaServiceService){
 
-        {id: '1',
-        especialidade: 'Cardiologista',
-        doutor: 'Pedro',
-        data: '03/04/2024',
-        horario: '13:22'},
+    }
 
-        {id: '1',
-        especialidade: 'Cardiologista',
-        doutor: 'Pedro',
-        data: '03/04/2024',
-        horario: '13:22'},
-
-      
-      
-    ]
+    ngOnInit(): void {
+      this.service.listar().subscribe((listaConsultas) => {
+        this.listaConsultas = listaConsultas
+      })
+    }
 
   }

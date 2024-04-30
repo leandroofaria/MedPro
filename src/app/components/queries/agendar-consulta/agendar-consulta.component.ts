@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Consulta } from '../consultaInterface';
 
 @Component({
   selector: 'app-agendar-consulta',
@@ -7,8 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AgendarConsultaComponent {
 
-  consulta = {
-    id: '1',
+  consulta: Consulta = {
+    id: 1,
     especialidade: 'Cardiologista',
     doutor: 'Pedro',
     data: '03/04/2024',

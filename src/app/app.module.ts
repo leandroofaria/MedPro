@@ -15,6 +15,7 @@ import { AgendarConsultaComponent } from './components/queries/agendar-consulta/
 import { FormsModule } from '@angular/forms';
 import { ListarConsultasComponent } from './components/queries/listar-consultas/listar-consultas.component';
 import { ConsultaComponent } from './components/queries/consulta/consulta.component';
+import { HttpClientModule } from '@angular/common/http'; // Importe HttpClientModule aqui
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ConsultaComponent } from './components/queries/consulta/consulta.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule // Adicione HttpClientModule aos imports
   ],
   providers: [],
   bootstrap: [AppComponent]

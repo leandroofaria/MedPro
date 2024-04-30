@@ -1,0 +1,25 @@
+{ 
+    "consultas": [
+        {
+            "id": "1",
+            "especialidade": "Pediatra",
+            "doutor": "Ana Julia",
+            "data": "18/05/2024",
+            "horario": "16:20"
+        },
+        {
+            "id": "2",
+            "especialidade": "Endocrino",
+            "doutor": "Jose Lopez",
+            "data": "23/07/2024",
+            "horario": "11:40"
+        },
+        {
+            "id": "3",
+            "especialidade": "Cirurgião",
+            "doutor": "Matheus Luiz",
+            "data": "20/09/2024",
+            "horario": "18:30"
+        }
+    ]
+}

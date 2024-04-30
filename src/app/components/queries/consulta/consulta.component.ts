@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Consulta } from '../consultaInterface';
 
 @Component({
   selector: 'app-consulta',
@@ -7,8 +8,8 @@ import { Component, Input } from '@angular/core';
 })
 export class ConsultaComponent {
 
-@Input()  consulta = {
-    id: '',
+@Input()  consulta: Consulta = {
+    id: 0,
     especialidade: 'Cardiologista',
     doutor: 'Pedro',
     data: '03/04/2024',
