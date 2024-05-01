@@ -7,6 +7,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { PatienthomeComponent } from './components/pages/patienthome/patienthome.component';
 import { AgendarConsultaComponent } from './components/queries/agendar-consulta/agendar-consulta.component';
 import { ListarConsultasComponent } from './components/queries/listar-consultas/listar-consultas.component';
+import { ExcluirConsultaComponent } from './components/queries/excluir-consulta/excluir-consulta.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -15,7 +16,9 @@ const routes: Routes = [
   {path:'register', component: RegisterComponent},
   {path:'patienthome', redirectTo: 'listarconsulta', pathMatch: 'full'},
   {path:'agendarconsulta', component: AgendarConsultaComponent},
-  {path: 'listarconsulta', component: ListarConsultasComponent}
+  {path: 'listarconsulta', component: ListarConsultasComponent},
+  { path: 'queries/excluirConsulta/:id', component: ExcluirConsultaComponent}
+
 ];
 
 @NgModule({

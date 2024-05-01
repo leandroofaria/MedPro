@@ -21,5 +21,15 @@ export class ConsultaServiceService {
     return this.http.post<Consulta>(this.API, consulta)
   }
 
+  excluir(id: number): Observable<Consulta> {
+    const url = `${this.API}/${id}`
+    return this.http.delete<Consulta>(url)
+}
+
+buscarPorId(id: number): Observable<Consulta> {
+  const url = `${this.API}/${id}`
+  return this.http.get<Consulta>(url)
+}
+
   
 }

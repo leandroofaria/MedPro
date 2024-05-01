@@ -15,7 +15,8 @@ import { AgendarConsultaComponent } from './components/queries/agendar-consulta/
 import { FormsModule } from '@angular/forms';
 import { ListarConsultasComponent } from './components/queries/listar-consultas/listar-consultas.component';
 import { ConsultaComponent } from './components/queries/consulta/consulta.component';
-import { HttpClientModule } from '@angular/common/http'; // Importe HttpClientModule aqui
+import { HttpClientModule } from '@angular/common/http';
+import { ExcluirConsultaComponent } from './components/queries/excluir-consulta/excluir-consulta.component'; // Importe HttpClientModule aqui
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http'; // Importe HttpClientMo
     ComponentsComponent,
     AgendarConsultaComponent,
     ListarConsultasComponent,
-    ConsultaComponent
+    ConsultaComponent,
+    ExcluirConsultaComponent
   ],
   imports: [
     BrowserModule,
