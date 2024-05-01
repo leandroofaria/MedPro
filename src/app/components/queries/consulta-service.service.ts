@@ -21,6 +21,11 @@ export class ConsultaServiceService {
     return this.http.post<Consulta>(this.API, consulta)
   }
 
+  editar(consulta: Consulta): Observable<Consulta> {
+    const url = `${this.API}/${consulta.id}`
+    return this.http.put<Consulta>(url, consulta )
+}
+
   excluir(id: number): Observable<Consulta> {
     const url = `${this.API}/${id}`
     return this.http.delete<Consulta>(url)

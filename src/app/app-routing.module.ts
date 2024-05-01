@@ -8,6 +8,7 @@ import { PatienthomeComponent } from './components/pages/patienthome/patienthome
 import { AgendarConsultaComponent } from './components/queries/agendar-consulta/agendar-consulta.component';
 import { ListarConsultasComponent } from './components/queries/listar-consultas/listar-consultas.component';
 import { ExcluirConsultaComponent } from './components/queries/excluir-consulta/excluir-consulta.component';
+import { EditarConsultaComponent } from './components/queries/editar-consulta/editar-consulta.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:'patienthome', redirectTo: 'listarconsulta', pathMatch: 'full'},
   {path:'agendarconsulta', component: AgendarConsultaComponent},
   {path: 'listarconsulta', component: ListarConsultasComponent},
-  { path: 'queries/excluirConsulta/:id', component: ExcluirConsultaComponent}
+  {path: 'queries/excluirConsulta/:id', component: ExcluirConsultaComponent},
+  {path: 'queries/editarConsulta/:id', component: EditarConsultaComponent}
 
 ];
 

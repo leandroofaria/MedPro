@@ -16,7 +16,8 @@ import { FormsModule } from '@angular/forms';
 import { ListarConsultasComponent } from './components/queries/listar-consultas/listar-consultas.component';
 import { ConsultaComponent } from './components/queries/consulta/consulta.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ExcluirConsultaComponent } from './components/queries/excluir-consulta/excluir-consulta.component'; // Importe HttpClientModule aqui
+import { ExcluirConsultaComponent } from './components/queries/excluir-consulta/excluir-consulta.component';
+import { EditarConsultaComponent } from './components/queries/editar-consulta/editar-consulta.component'; // Importe HttpClientModule aqui
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ExcluirConsultaComponent } from './components/queries/excluir-consulta/
     AgendarConsultaComponent,
     ListarConsultasComponent,
     ConsultaComponent,
-    ExcluirConsultaComponent
+    ExcluirConsultaComponent,
+    EditarConsultaComponent
   ],
   imports: [
     BrowserModule,

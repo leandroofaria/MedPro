@@ -1,0 +1,28 @@
+<section class="container editar-pensmamentos">
+    <header class="header">
+        <h2>Editar consulta:</h2>
+    </header>
+
+    <form action="">
+        <label for="data_consulta">Data da consulta</label>
+        <input type="date" 
+        class="input" 
+        id="data_consulta"
+        name="data_consulta"
+        [(ngModel)]="consulta.data">
+
+        <label for="horario">Horário da consulta</label>
+        <input type="time" 
+        class="input"
+        id="horario"
+        name="horario"
+        [(ngModel)]="consulta.horario">
+
+    </form>
+
+    <div class="acoes">
+        <button (click)="editarConsulta()" class="botao">Agendar</button>
+        <button class="botao" routerLink="/patienthome">Cancelar</button>
+    </div>
+
+</section>
