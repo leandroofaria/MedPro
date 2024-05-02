@@ -1,32 +1,3 @@
 {
-  "consultas": [
-    {
-      "especialidade": "Cardiologista",
-      "doutor": "Ricardo",
-      "data": "2024-03-13",
-      "horario": "13:30",
-      "id": 1
-    },
-    {
-      "especialidade": "Fisioterapeuta",
-      "doutor": "Lucas",
-      "data": "2024-05-30",
-      "horario": "14:30",
-      "id": 2
-    },
-    {
-      "especialidade": "Terapeuta",
-      "doutor": "Ana Julia",
-      "data": "2025-09-25",
-      "horario": "15:50",
-      "id": 3
-    },
-    {
-      "especialidade": "Pediatra",
-      "doutor": "Joaquim",
-      "data": "2024-08-30",
-      "horario": "17:30",
-      "id": 4
-    }
-  ]
+  "consultas": []
 }
