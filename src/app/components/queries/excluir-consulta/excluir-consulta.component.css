@@ -1,7 +1,9 @@
+/* Estilos para a tela de excluir uma consulta */
 .modal {
     background: #fff;
-    box-shadow: 7px 8px 0px 0px #154580;
-    min-width: 360px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow suave */
+    min-width: 320px; /* Reduzi um pouco a largura mínima */
+    max-width: 90%; /* Ajustei a largura máxima para responsividade */
     min-height: 150px;
     position: fixed;
     left: 50%;
@@ -11,57 +13,59 @@
     z-index: 11;
     font-size: 1.5rem;
     text-align: center;
-    padding-top: 50px;
-  }
-  
-  .overlay {
-    background: #000;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
     height: 100vh;
     left: 0;
-    opacity: 0.5;
     position: fixed;
     top: 0;
     width: 100vw;
     z-index: 10;
-  }
-  
-  .acoes {
+}
+
+.acoes {
     display: flex;
     justify-content: center;
     align-items: center;
-    align-content: center;
     margin-top: 30px;
-  }
-  
-  .botao {
+}
+
+.botao {
     margin: 5px;
-    margin-top: 70px;
-    width: 200px;
-  }
-  
-  .botao-cancelar {
-    border: none;
+    width: 150px; /* Reduzi um pouco a largura dos botões */
+    padding: 10px; /* Adicionei padding aos botões para melhorar a aparência */
+    border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px;
-    margin-top: 10px;
-  }
-  
-  .botao-excluir {
+    font-size: 1.2rem; /* Ajustei o tamanho da fonte dos botões */
+    font-weight: bold; /* Negrito nos botões */
+    text-transform: uppercase; /* Texto em maiúsculas nos botões */
+}
+
+.botao-excluir {
+    background-color: #dc3545;
+    color: #fff;
     border: none;
-    cursor: pointer;
-    margin-left: 5px;
-    margin-top: 10px;
-  }
-  
-  .excluir-consultas {
-    padding: 10rem 0;
-  }
-  
-  @media screen and (max-width: 548px) {
+}
+
+.botao-cancelar {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 548px) {
     .modal {
-      width: 90%;
-      min-width: 90%;
-      padding: 50px 12px 24px;
-      font-size: 1.2rem;
+        width: 90%;
+        min-width: 90%;
+        padding: 40px 12px 24px;
+        font-size: 1.2rem;
     }
-  }
+
+    .botao {
+        width: 130px;
+        font-size: 1rem;
+    }
+}

@@ -1,11 +1,3 @@
 {
-  "consultas": [
-    {
-      "especialidade": "Fisioterapeuta",
-      "doutor": "Lucas",
-      "data": "2024-05-30",
-      "horario": "14:30",
-      "id": 1
-    }
-  ]
+  "consultas": []
 }
