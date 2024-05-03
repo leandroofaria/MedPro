@@ -45,3 +45,27 @@
     background-color: #47b5ff; /* Mude a cor de fundo ao passar o mouse */
     color: white; /* Mude a cor do texto ao passar o mouse */
 }
+
+@media only screen and (max-width: 767px) {
+    .main-section {
+        flex-direction: column; /* Alterar a direção do flexbox para empilhar verticalmente */
+        margin: 2rem auto; /* Ajustar a margem para espaçamento */
+    }
+
+    .main-section img {
+        max-width: 100%; /* Imagem ocupando toda a largura disponível */
+        margin-bottom: 1rem; /* Adicionar espaçamento abaixo da imagem */
+    }
+
+    .text-section {
+        font-size: 1.2rem; /* Reduzir o tamanho da fonte para telas menores */
+    }
+
+    .button-section {
+        justify-content: center; /* Centralizar os botões horizontalmente */
+    }
+
+    .button-section a {
+        margin: 0 10px; /* Aumentar o espaçamento entre os botões */
+    }
+}
