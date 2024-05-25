@@ -1,49 +1,65 @@
-/* Estilizando o cabeçalho */
 header {
-    background-color: #4684e2;
-    padding: 25px 25px;
-    margin: 0;
-    display: flex;
-    justify-content: space-between; 
-    width: 100%; 
-    align-items: center; 
-  }
-  
-  /* Estilizando o logotipo */
-  header h3 {
-    font-size: 24px;
-    color: #fff;
-    margin: 0; /* Remover margem padrão */
-  }
-  
-  /* Estilizando a navegação */
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 25px;
-  }
-  
-  nav ul li a {
-    font-size: 18px;
-    text-decoration: none;
-    color: #fff;
-    transition: 0.5s;
-  }
-  
-  nav ul li a:hover {
-    color: #dff6ff;
-    font-size: 19px;
-  }
-
-.cadastrar {
-    background-color: whitesmoke;
-    padding: 7px;
-    border-radius:7px;
+  padding: 10px;
+  background: #1363DF;
+  height: 14vh;
 }
-  
+.logo {
+  width: 90px;
+  margin-top: 5px;
+}
+.logo:hover {
+  cursor: pointer;
+}
+.desktop_menu {
+  margin-top: 24px;
+}
+.desktop_menu ul {
+  padding: 0;
+  margin: 0;
+}
+.desktop_menu ul li {
+  list-style-type: none;
+  color: white;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 26px;
+}
+.desktop_menu ul li:hover {
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #0B212F;
+  transition: 0.3s ease-in-out;
+}
+.menu-icon {
+  display: none;
+}
 
+@media screen and (min-width: 128px) and (max-width: 900px) {
+  .desktop_menu {
+    position: fixed !important;
+    right: -280px;
+    transition: 0.4s ease-in-out;
+    top: 64px;
+    background: #1363DF;
+    width: 280px;
+    height: 100%;
+  }
+  .desktop_menu ul li {
+    display: block;
+    text-align: left;
+    margin: 0;
+    padding: 10px 0 10px 26px;
+    border-bottom: 1px solid grey;
+  }
+  .menu-icon {
+    display: block;
+    color: white;
+    font-size: 40px;
+    padding-top: 10px;
+  }
+  .mobile_menu {
+    right: 0;
+    transition: 0.4s ease-in-out;
+  }
+}
