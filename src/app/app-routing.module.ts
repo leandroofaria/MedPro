@@ -11,11 +11,17 @@ import { ExcluirConsultaComponent } from './components/queries/excluir-consulta/
 import { EditarConsultaComponent } from './components/queries/editar-consulta/editar-consulta.component';
 
 const routes: Routes = [
+  
   {path:'', component: HomeComponent},
   {path:'about', component: AboutComponent},
   {path:'login', component: LoginComponent},
   {path:'register', component: RegisterComponent},
+
+
   {path:'patienthome', redirectTo: 'listarconsulta', pathMatch: 'full'},
+  {path:'doctorhome', redirectTo: 'listarconsulta', pathMatch: 'full'},
+
+
   {path:'agendarconsulta', component: AgendarConsultaComponent},
   {path: 'listarconsulta', component: ListarConsultasComponent},
   {path: 'queries/excluirConsulta/:id', component: ExcluirConsultaComponent},

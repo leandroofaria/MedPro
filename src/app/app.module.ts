@@ -18,13 +18,8 @@ import { ConsultaComponent } from './components/queries/consulta/consulta.compon
 import { HttpClientModule } from '@angular/common/http';
 import { ExcluirConsultaComponent } from './components/queries/excluir-consulta/excluir-consulta.component';
 import { EditarConsultaComponent } from './components/queries/editar-consulta/editar-consulta.component';
-import { CadastrarMedicoComponent } from './components/doctors/cadastrar-medico/cadastrar-medico.component';
-import { ListarMedicosComponent } from './components/doctors/listar-medicos/listar-medicos.component';
-import { EditarMedicosComponent } from './components/doctors/editar-medicos/editar-medicos.component';
-import { ExcluirMedicoComponent } from './components/doctors/excluir-medico/excluir-medico.component';
-import { CadastrarPacienteComponent } from './components/patients/cadastrar-paciente/cadastrar-paciente.component';
-import { EditarPacienteComponent } from './components/patients/editar-paciente/editar-paciente.component';
-import { ExcluirPacienteComponent } from './components/patients/excluir-paciente/excluir-paciente.component'; // Importe HttpClientModule aqui
+import { DoctorhomeComponent } from './components/pages/doctorhome/doctorhome.component';
+
 
 @NgModule({
   declarations: [
@@ -42,13 +37,7 @@ import { ExcluirPacienteComponent } from './components/patients/excluir-paciente
     ConsultaComponent,
     ExcluirConsultaComponent,
     EditarConsultaComponent,
-    CadastrarMedicoComponent,
-    ListarMedicosComponent,
-    EditarMedicosComponent,
-    ExcluirMedicoComponent,
-    CadastrarPacienteComponent,
-    EditarPacienteComponent,
-    ExcluirPacienteComponent
+    DoctorhomeComponent
   ],
   imports: [
     BrowserModule,
