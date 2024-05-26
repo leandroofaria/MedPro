@@ -10,6 +10,27 @@ header {
 .logo:hover {
   cursor: pointer;
 }
+.text-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.profile-icon {
+  margin-right: 20px;
+  color: white;
+  font-size: 30px;
+}
+.profile-icon:hover {
+  color: #0B212F;
+}
+.logout-icon {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+.logout-icon:hover {
+  color: #0B212F;
+}
 .desktop_menu {
   margin-top: 24px;
 }

@@ -10,7 +10,6 @@ import { ListarConsultasComponent } from './components/queries/listar-consultas/
 import { ExcluirConsultaComponent } from './components/queries/excluir-consulta/excluir-consulta.component';
 import { EditarConsultaComponent } from './components/queries/editar-consulta/editar-consulta.component';
 import { DoctorRegisterComponent } from './components/register/doctor-register/doctor-register.component';
-import { LoggedHeaderComponent } from './components/header/logged-header/logged-header.component';
 
 const routes: Routes = [
   
@@ -24,9 +23,6 @@ const routes: Routes = [
   {path:'doctorhome', redirectTo: 'listarconsulta', pathMatch: 'full'},
 
   {path:'doctor-register', component: DoctorRegisterComponent},
-
-  {path:'logged-header', component: LoggedHeaderComponent},
-
 
   {path:'agendarconsulta', component: AgendarConsultaComponent},
   {path: 'listarconsulta', component: ListarConsultasComponent},
