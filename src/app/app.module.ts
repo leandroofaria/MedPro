@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ExcluirConsultaComponent } from './components/queries/excluir-consulta/excluir-consulta.component';
 import { EditarConsultaComponent } from './components/queries/editar-consulta/editar-consulta.component';
 import { DoctorhomeComponent } from './components/pages/doctorhome/doctorhome.component';
+import { DoctorRegisterComponent } from './components/register/doctor-register/doctor-register.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { DoctorhomeComponent } from './components/pages/doctorhome/doctorhome.co
     ConsultaComponent,
     ExcluirConsultaComponent,
     EditarConsultaComponent,
-    DoctorhomeComponent
+    DoctorhomeComponent,
+    DoctorRegisterComponent
   ],
   imports: [
     BrowserModule,

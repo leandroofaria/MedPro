@@ -9,6 +9,7 @@ import { AgendarConsultaComponent } from './components/queries/agendar-consulta/
 import { ListarConsultasComponent } from './components/queries/listar-consultas/listar-consultas.component';
 import { ExcluirConsultaComponent } from './components/queries/excluir-consulta/excluir-consulta.component';
 import { EditarConsultaComponent } from './components/queries/editar-consulta/editar-consulta.component';
+import { DoctorRegisterComponent } from './components/register/doctor-register/doctor-register.component';
 
 const routes: Routes = [
   
@@ -20,6 +21,8 @@ const routes: Routes = [
 
   {path:'patienthome', redirectTo: 'listarconsulta', pathMatch: 'full'},
   {path:'doctorhome', redirectTo: 'listarconsulta', pathMatch: 'full'},
+
+  {path:'doctor-register', component: DoctorRegisterComponent},
 
 
   {path:'agendarconsulta', component: AgendarConsultaComponent},
