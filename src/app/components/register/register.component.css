@@ -170,6 +170,11 @@ body {
     color: #fff;
 }
 
+#register-btn {
+    color: white;
+    font-weight: 700;
+}
+
 @media screen and (max-width: 1330px) {
     .form-image {
         display: none;

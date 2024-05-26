@@ -178,7 +178,7 @@ body {
     font-size: 0.8rem;
     appearance: none; 
     background-color: #ffffff; 
-    background-image: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5 7l5 5 5-5h0" stroke="%236c63ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5 7l5 5 5-5h0" stroke="%236c63ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'); 
     background-repeat: no-repeat;
     background-position: right 1rem top 50%;
     background-size: 1.2rem;
@@ -203,6 +203,12 @@ body {
 .input-box select::placeholder {
     color: #000000be;
 }
+
+#register-btn {
+    color: white;
+    font-weight: 700;
+}
+
 
 @media screen and (max-width: 1330px) {
     .form-image {

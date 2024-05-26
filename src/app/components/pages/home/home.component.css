@@ -1,71 +1,128 @@
-/* Estilizando a seção principal */
-.main-section {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.home {
+    width: 100%;
+    height: 87vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 5rem;
+    justify-content: space-between;
+    padding: 0px 10%;
+    margin-top: 0;
+    background: whitesmoke;
 }
 
-/* Estilizando a imagem */
-.main-section img {
-    max-width: 50%; /* Definir uma largura máxima para a imagem */
-    border-radius: 10px;
-    height: auto;
+.home-text {
+    max-width: 37rem;
+    margin-right: 2rem; /* Adicionando margem à direita para afastar o texto da imagem */
 }
 
-/* Estilizando o texto */
-.text-section {
-    flex: 1; /* O texto ocupa todo o espaço disponível restante */
-    padding: 0 1rem; /* Adicione um pouco de preenchimento para espaçamento */
+.home-text .text-h4 {
     font-size: 1.5rem;
-    font-weight: 500;
+    color: #1363DF;
+    margin-bottom: .5rem;
 }
 
-/* Estilizando a seção de botões */
-.button-section {
-    display: flex; /* Use flexbox para alinhar os botões lado a lado */
-    justify-content: left; /* Centralize os botões horizontalmente */
-    margin-top: 1rem; /* Adicione um espaçamento superior entre o texto e os botões */
+.home-text .text-h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
 }
 
-/* Estilizando os links */
-.button-section a {
-    position: left;
-    margin: 0 5px; /* Adicione um espaçamento entre os botões */
-    text-decoration: none; /* Remova a decoração do link */
-    color: white; /* Cor dos botões */
-    padding: 10px; /* Adicione padding para uma aparência mais agradável */
-    border-radius: 5px; /* Adicione borda arredondada */
-    background-color: #1363df; /* Cor de fundo dos botões */
-    transition: all 0.3s ease; /* Adicione uma transição suave */
+.home-text p {
+    margin-bottom: 4rem;
+    font-size: 1REM;
 }
 
-/* Estilizando os botões ao passar o mouse */
-.button-section a:hover {
-    background-color: #47b5ff; /* Mude a cor de fundo ao passar o mouse */
-    color: white; /* Mude a cor do texto ao passar o mouse */
+.home-btn {
+    padding: 15px 45px;
+    background: #6c63ff;
+    color: white;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.5s;
+    margin-right: 1rem;
 }
 
-@media only screen and (max-width: 767px) {
-    .main-section {
-        flex-direction: column; /* Alterar a direção do flexbox para empilhar verticalmente */
-        margin: 2rem auto; /* Ajustar a margem para espaçamento */
-    }
+.home-btn:hover {
+    background: #47B5FF;
+}
 
-    .main-section img {
-        max-width: 100%; /* Imagem ocupando toda a largura disponível */
-        margin-bottom: 1rem; /* Adicionar espaçamento abaixo da imagem */
-    }
+.home-img img {
+    width: 85vh;
+    border-radius: 10px;
+    margin-left: 2rem;
+}
 
-    .text-section {
-        font-size: 1.2rem; /* Reduzir o tamanho da fonte para telas menores */
+@media (max-width: 785px) {
+    .home-img {
+        display: none; /* Oculta a imagem em dispositivos móveis */
     }
-
-    .button-section {
-        justify-content: center; /* Centralizar os botões horizontalmente */
+    .navigation{
+        padding: 18px 20px;
     }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    /*main*/
+    .home{
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+    .home .text-h4{
+        font-size: 15px;
+    }
+    .home .text-h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .home p{
+        font-size: 15px;
+    }
+    .home-img{
+        width: 125%;
+    }
+}
 
-    .button-section a {
-        margin: 0 10px; /* Aumentar o espaçamento entre os botões */
+@media (max-width: 1028px) {
+    .home-img {
+        display: none; /* Oculta a imagem em dispositivos com largura menor que 1028px */
+    }
+    .home-text {
+        margin-right: 0; /* Remove a margem à direita para centralizar o texto */
     }
 }

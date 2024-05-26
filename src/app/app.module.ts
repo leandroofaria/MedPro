@@ -20,6 +20,7 @@ import { ExcluirConsultaComponent } from './components/queries/excluir-consulta/
 import { EditarConsultaComponent } from './components/queries/editar-consulta/editar-consulta.component';
 import { DoctorhomeComponent } from './components/pages/doctorhome/doctorhome.component';
 import { DoctorRegisterComponent } from './components/register/doctor-register/doctor-register.component';
+import { LoggedHeaderComponent } from './components/header/logged-header/logged-header.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { DoctorRegisterComponent } from './components/register/doctor-register/d
     ExcluirConsultaComponent,
     EditarConsultaComponent,
     DoctorhomeComponent,
-    DoctorRegisterComponent
+    DoctorRegisterComponent,
+    LoggedHeaderComponent
   ],
   imports: [
     BrowserModule,
