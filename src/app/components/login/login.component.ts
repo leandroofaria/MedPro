@@ -20,8 +20,6 @@ export class LoginComponent {
     this.http.post('http://localhost:8080/pacientes/login', this.loginObj).subscribe((res:any) => {
       if(res.token) { 
         localStorage.setItem('loginToken', res.token);
-        
-
         this.router.navigateByUrl('/patienthome');
       }
     }, (error) => {
