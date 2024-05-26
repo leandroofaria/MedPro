@@ -1,4 +1,4 @@
-<div class="body">
+<!-- <div class="body">
     <div class="wrapper">
         <form action="">
             <h1>Login</h1>
@@ -10,13 +10,57 @@
                 <input type="password" placeholder="Senha" [(ngModel)]="loginObj.senha" name="senha">
                 <i class='bx bxs-lock-alt' ></i>
             </div>
-            <div class="remember-forgot">
-                <a href="#">Esqueceu a senha?</a>
-            </div>
             <button type="button" class="btn" (click)="onLogin()">Entrar</button>
-            <div class="register-link">
-                <p>Não possui uma conta?<a routerLink="/register"> Cadastre-se</a></p>
-            </div>
         </form>
     </div>
-</div>
+</div> -->
+
+<body>
+    <div class="container">
+
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Entrar</h1>
+                    </div>
+                    <div class="login-button">
+                        <button><a routerLink="/register">Cadastrar</a></button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" 
+                        type="email" 
+                        name="email" 
+                        placeholder="Digite seu e-mail" 
+                        [(ngModel)]="loginObj.email">
+                    </div>
+                    
+
+                    <div class="input-box">
+                        <label for="senha">Senha</label>
+                        <input id="senha" 
+                        type="password" 
+                        name="senha" 
+                        placeholder="Digite sua senha" 
+                        [(ngModel)]="loginObj.senha">
+                    </div>
+
+                </div>
+
+                <div class="continue-button">
+                    <button id="login-botao" (click)="onLogin()">Entrar</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-image">
+            <img src="assets/img/medpro2.svg" alt="">
+        </div>
+
+    </div>
+</body>
