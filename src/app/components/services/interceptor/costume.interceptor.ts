@@ -18,7 +18,7 @@ export class CostumeInterceptor implements HttpInterceptor {
     if (token) {
       const newCloneRequest = request.clone({
         setHeaders: {
-          Authorization: `bearer-key ${token}`
+          Authorization: `Bearer ${token}`
         }
       });
   

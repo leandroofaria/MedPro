@@ -33,6 +33,7 @@ export class LoginComponent {
       if(res.token) { 
         localStorage.setItem('loginToken', res.token);
         localStorage.setItem('tipo', res.tipo)
+        localStorage.setItem('IdUser', res.id)
         this.authService.login();
         if (res.tipo === 'paciente') {
           this.router.navigateByUrl('/patienthome');
