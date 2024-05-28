@@ -3,36 +3,42 @@
         <h2>Agende uma consulta nova:</h2>
     </header>
 
-    <form action="">
+    <form [formGroup]="formulario">
         <label for="especialidade">Especialidade</label>
         <input type="textarea" 
         class="input" 
         id="especialidade"
-        name="especialidade"
+        formControlName="especialidade"
         placeholder="Especialidade do médico"
-        [(ngModel)]="consulta.especialidade">
+        >
+        <div class="mensagem__erro" *ngIf="formulario.get('especialidade')?.errors?.['required'] && formulario.get('especialidade')?.touched">
+           A especialidadeé obrigatória.
+        </div>
 
         <label for="doutor">Doutor (a)</label>
         <input type="text" 
         class="input" 
         id="doutor"
-        name="doutor"
+        formControlName="doutor"
         placeholder="Doutor (a)"
-        [(ngModel)]="consulta.doutor">
+        >
+        <div class="mensagem__erro" *ngIf="formulario.get('doutor')?.errors?.['required'] && formulario.get('doutor')?.touched">
+            O nome do doutor é obrigatório.
+        </div>
 
         <label for="data_consulta">Data da consulta</label>
         <input type="date" 
         class="input" 
         id="data_consulta"
-        name="data_consulta"
-        [(ngModel)]="consulta.data">
+        formControlName="data"
+        >
 
         <label for="horario">Horário da consulta</label>
         <input type="time" 
         class="input"
         id="horario"
-        name="horario"
-        [(ngModel)]="consulta.horario">
+        formControlName="horario"
+        >
 
     </form>
 

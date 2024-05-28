@@ -1,4 +1,4 @@
-
+/* Estilos padrão */
 .main-section {
     display: flex;
     justify-content: center;
@@ -7,13 +7,11 @@
     flex-direction: column;
 }
 
-/* Estilizando o texto */
 .text-section {
     text-align: justify;
     font-size: 1.5rem;
     font-weight: 500;
     max-width: 800px; /* Controla a largura máxima do texto */
-
     margin-bottom: 2rem;
 }
 
@@ -22,13 +20,11 @@
     margin-bottom: 1rem;
 }
 
-/* Estilizando a seção de botões */
 .button-section {
     display: flex;
     justify-content: flex-start; /* Botões alinhados à esquerda */
 }
 
-/* Estilizando os links */
 .button-section a {
     margin-top: 2rem; /* Adicione um espaçamento entre os botões */
     text-decoration: none; /* Remova a decoração do link */
@@ -39,7 +35,31 @@
     transition: all 0.3s ease; /* Adicione uma transição suave */
 }
 
-/* Estilizando os botões ao passar o mouse */
 .button-section a:hover {
     background-color: #47b5ff; /* Mude a cor de fundo ao passar o mouse */
+}
+
+/* Media query para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .main-section {
+        margin: 2rem; /* Reduz a margem para dispositivos móveis */
+    }
+
+    .text-section {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte para dispositivos móveis */
+        max-width: 100%; /* Altera a largura máxima para ocupar toda a largura do dispositivo */
+        padding: 0 1rem; /* Adiciona padding nas laterais */
+    }
+
+    .text-section h1 {
+        font-size: 2rem; /* Reduz o tamanho do título para dispositivos móveis */
+    }
+
+    .button-section {
+        justify-content: center; /* Centraliza os botões para dispositivos móveis */
+    }
+
+    .button-section a {
+        margin-top: 1rem; /* Reduz o espaçamento entre os botões para dispositivos móveis */
+    }
 }

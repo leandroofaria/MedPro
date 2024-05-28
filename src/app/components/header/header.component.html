@@ -1,12 +1,47 @@
-<header>
-    <h3>MedPro</h3>
-    <nav>
-      <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/about">Sobre Nós</a></li>
-        <li><a routerLink="/login">Entrar</a></li>
-        <li><a routerLink="/register" class="cadastrar" [ngStyle]="{'color':'black'}">Cadastrar</a></li>
-      </ul>
-    </nav>
-  </header>
-  
+<header *ngIf="!isLoggedIn">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-3">
+                <div class="logo">
+                    <img src="assets/img/MedPro-Logo1.png" class="logo" alt="" routerLink="/">
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-9 col-9 text-end">
+                <div class="menu-icon" (click)="openMenu()">
+                    <i class="{{menu_icon}}"></i>
+                </div>
+                <div class="desktop_menu" [class.mobile_menu]="menuValue">
+                    <ul>
+                        <li routerLink="/">Início</li>
+                        <li routerLink="/about">Sobre Nós</li>
+                        <li routerLink="/register">Cadastrar</li>
+                        <li routerLink="/login">Entrar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<header *ngIf="isLoggedIn">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-3">
+            <div class="logo">
+              <img src="assets/img/MedPro-Logo1.png" class="logo" alt="" routerLink="/">
+            </div>
+          </div>
+          <div class="col-md-9 col-sm-9 col-9 text-end">
+            <div class="profile-icon">
+              <i class="bi bi-calendar"></i>
+            </div>
+            <div class="profile-icon">
+              <i class="bi bi-person-circle" routerLink="/user-profile"></i>
+            </div>
+            <div class="logout-icon">
+              <i class="bi bi-box-arrow-left"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+</header>

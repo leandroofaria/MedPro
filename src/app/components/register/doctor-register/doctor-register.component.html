@@ -2,7 +2,7 @@
     <div class="container">
 
         <div class="form-image">
-            <img src="assets/img/medpro1.svg" alt="">
+            <img src="assets/img/medpro3.svg" alt="">
         </div>
 
         <div class="form">
@@ -29,7 +29,7 @@
                     <div class="input-box">
                         <label for="senha">Senha</label>
                         <input id="senha" 
-                        type="senha" 
+                        type="password" 
                         name="senha" 
                         placeholder="Digite sua senha" 
                         [(ngModel)]="registerObj.senha">
@@ -38,8 +38,7 @@
                     <div class="input-box">
                         <label for="email">E-mail</label>
                         <input id="email" 
-                        type="email" 
-                        name="email" 
+                        type="email" name="email" 
                         placeholder="Digite seu e-mail" 
                         [(ngModel)]="registerObj.email">
                     </div>
@@ -54,12 +53,12 @@
                     </div>
 
                     <div class="input-box">
-                        <label for="cpf">CPF (Apenas Números)</label>
-                        <input id="cpf" 
+                        <label for="crm">CRM (Apenas Números)</label>
+                        <input id="crm" 
                         type="number" 
-                        name="cpf" 
-                        placeholder="Digite seu cpf" 
-                        [(ngModel)]="registerObj.cpf">
+                        name="crm" 
+                        placeholder="Digite seu CRM" 
+                        [(ngModel)]="registerObj.crm">
                     </div>
 
                     <div class="input-box">
@@ -71,10 +70,19 @@
                         [(ngModel)]="registerObj.endereco">
                     </div>
 
-                    <div class="medicos">
-                        <p>Você é um médico? <a routerLink="/doctor-register">Clique Aqui!</a></p>
+                    <div class="input-box">
+                        <label for="especialidade">Especialidade</label>
+                        <select id="especialidade" 
+                        name="especialidade" 
+                        [(ngModel)]="registerObj.especialidade">
+                            <option value="ORTOPEDIA">ORTOPEDIA</option>
+                            <option value="CARDIOLOGIA">CARDIOLOGIA</option>
+                            <option value="GINECOLOGIA">GINECOLOGIA</option>
+                            <option value="DERMATOLOGIA">DERMATOLOGIA</option>
+                            <option value="PSIQUIATRIA">PSIQUIATRIA</option>
+                        </select>
                     </div>
-                </div>
+                </div>                
 
                 <div class="continue-button">
                     <button id="register-btn" (click)="onRegister()">Entrar</button>

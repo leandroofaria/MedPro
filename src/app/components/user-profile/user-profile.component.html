@@ -1,0 +1,140 @@
+<div class="container">
+    <div class="main-body">
+    
+        <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                            <div class="mt-3">
+                                <h4>Leandro Gabriel</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <!-- Conteúdo do perfil do paciente -->
+                        <div *ngIf="userType === 'paciente'">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Nome</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{userDetails.nome}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Email</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{userDetails.email}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Telefone</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{userDetails.telefone}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">CPF</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{userDetails.cpf}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Endereço</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{userDetails.endereco}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <a class="btn" id="edit-btn" target="__blank" href="">Editar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Conteúdo do perfil do médico -->
+                        <div *ngIf="userType === 'medico'">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Nome</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{userDetails.nome}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Especialidade</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{userDetails.especialidade}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Email</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{userDetails.email}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Telefone</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{userDetails.telefone}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">CRM</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{userDetails.crm}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Endereço</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{userDetails.endereco}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <a class="btn" id="edit-btn" target="__blank" href="">Editar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

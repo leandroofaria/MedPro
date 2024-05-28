@@ -4,26 +4,28 @@ import { Router } from '@angular/router';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 
+
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-doctor-register',
+  templateUrl: './doctor-register.component.html',
+  styleUrls: ['./doctor-register.component.css']
 })
-export class RegisterComponent {
+export class DoctorRegisterComponent {
 
   registerObj: any = {
     "nome": "",
     "email": "",
     "senha": "",
     "telefone": "",
-    "cpf": "",
-    "endereco": ""
+    "crm": "",
+    "endereco": "",
+    "especialidade": ""
   }
 
   constructor(private http: HttpClient, private router: Router) { }
 
   onRegister() {
-    this.http.post('http://localhost:8080/pacientes/cadastro', this.registerObj).pipe(
+    this.http.post('http://localhost:8080/medicos/cadastro', this.registerObj).pipe(
       catchError(error => {
         console.log(error);
         alert('Erro ao cadastrar usuário');
@@ -33,6 +35,5 @@ export class RegisterComponent {
       this.router.navigateByUrl('/login'); 
     });
   }
-  
-}
 
+}
