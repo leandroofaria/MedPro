@@ -20,6 +20,7 @@ export class UserProfileComponent implements OnInit {
   }
 
   fetchUserDetails() {
+  //  o if funciona assim: primeiro vai procurar pelo tipo do usuário, e em seguida, o id
     if (this.userType === 'medico' && this.userId) {
       this.http.get<any>(`http://localhost:8080/medicos/${this.userId}`).subscribe(
         (res) => {
