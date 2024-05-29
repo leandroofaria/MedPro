@@ -29,3 +29,10 @@
     color: white;
     font-weight: 500;
 }
+
+#delete-btn {
+    margin-left: 1rem;
+    background: #e43f3f;
+    color: white;
+    font-weight: 500;
+}
