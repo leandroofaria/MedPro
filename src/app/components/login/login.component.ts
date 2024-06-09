@@ -36,9 +36,9 @@ export class LoginComponent {
         localStorage.setItem('IdUser', res.id)
         this.authService.login();
         if (res.tipo === 'paciente') {
-          this.router.navigateByUrl('/patienthome');
+          this.router.navigateByUrl('/user-home');
         } else if (res.tipo === 'medico') {
-          this.router.navigateByUrl('/doctorhome');
+          this.router.navigateByUrl('/user-home');
         }
       }
     }, (error) => {

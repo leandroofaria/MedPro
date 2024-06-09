@@ -24,14 +24,19 @@
     margin-bottom: 2rem!important; /* Aumentando a margem inferior */
 }
 
-#edit-btn {
+#btn-edit,
+#btn-confirm {
     background: #6c63ff;
     color: white;
     font-weight: 500;
+    margin-right: 1rem;
+    border: none; 
+    padding: 0.4rem;
+    border-radius: 4px;
+    margin-bottom: 1.3rem;
 }
 
 #delete-btn {
-    margin-left: 1rem;
     background: #e43f3f;
     color: white;
     font-weight: 500;

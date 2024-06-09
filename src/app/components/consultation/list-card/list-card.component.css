@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.header {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    margin: 10px;
+}
+
+.botao {
+    margin: 10px;
+    background-color: #6c63ff;
+    color: #fff;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.consultas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.consulta-card {
+    border-radius: 5px;
+    padding: 15px;
+}
+
+
+.sem-consultas {
+    width: 100%;
+    margin: 10px;
+}
+
+.sem-consultas p {
+    font-size: 18px;
+    color: #555;
+}
