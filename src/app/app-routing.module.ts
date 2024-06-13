@@ -9,6 +9,8 @@ import { UserHomeComponent } from './components/user-home/user-home.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { ListCardComponent } from './components/consultation/list-card/list-card.component';
 import { ScheduleConsultationComponent } from './components/consultation/schedule-consultation/schedule-consultation.component';
+import { EditConsultationComponent } from './components/consultation/edit-consultation/edit-consultation.component';
+import { DeleteConsultationComponent } from './components/consultation/delete-consultation/delete-consultation.component';
 
 const routes: Routes = [
   
@@ -24,6 +26,9 @@ const routes: Routes = [
   {path:'user-home', component: ListCardComponent},
 
   {path:'schedule', component: ScheduleConsultationComponent},
+  {path:'edit/:id', component: EditConsultationComponent},
+  {path:'delete/:id', component: DeleteConsultationComponent},
+
 
 ];
 

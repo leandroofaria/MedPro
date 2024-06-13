@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 // Define a interface para o objeto de consulta
 interface Consulta {
+  id: string,
   nome: string;
   especialidade: string;
   data: string;

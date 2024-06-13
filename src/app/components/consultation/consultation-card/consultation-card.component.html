@@ -3,7 +3,7 @@
     <p class="doutor">Doutor (a): {{ consulta.nome }}</p>
     <p class="data">Data: {{ getFormattedDate(consulta.data) }}</p>
     <div class="acoes">
-        <button class="botao-excluir">Excluir</button>
-        <button class="botao-editar">Editar</button>
+        <button class="botao-excluir" [routerLink]="['/delete', consulta.id]">Excluir</button>
+        <button class="botao-editar" [routerLink]="['/edit', consulta.id]">Editar</button>
     </div>
 </div>

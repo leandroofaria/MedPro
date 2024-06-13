@@ -23,6 +23,8 @@ import { ListCardComponent } from './components/consultation/list-card/list-card
 import { AuthService } from './components/services/authentication/authentication.service';
 import { ConsultationService } from './components/services/consultation/consultation.service';
 import { ScheduleConsultationComponent } from './components/consultation/schedule-consultation/schedule-consultation.component';
+import { EditConsultationComponent } from './components/consultation/edit-consultation/edit-consultation.component';
+import { DeleteConsultationComponent } from './components/consultation/delete-consultation/delete-consultation.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { ScheduleConsultationComponent } from './components/consultation/schedul
     DeleteProfileComponent,
     ConsultationCardComponent,
     ListCardComponent,
-    ScheduleConsultationComponent
+    ScheduleConsultationComponent,
+    EditConsultationComponent,
+    DeleteConsultationComponent
   ],
   imports: [
     BrowserModule,

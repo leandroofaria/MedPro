@@ -22,4 +22,16 @@ export class ConsultationService {
   agendarConsulta(dadosAgendamento: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/consultas`, dadosAgendamento);
   }
+
+  getConsultaById(id: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/consultas/${id}`);
+  }
+
+  atualizarConsulta(dadosAtualizacao: any): Observable<any> {
+    return this.http.put(`${this.baseUrl}/consultas`, dadosAtualizacao);
+  }
+
+  excluirConsulta(id: string): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/consultas/${id}`);
+  }
 }
