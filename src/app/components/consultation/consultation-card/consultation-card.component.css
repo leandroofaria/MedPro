@@ -36,7 +36,7 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 1rem;
-    margin-right: 10px; /* Adicionei margem à direita para criar espaçamento */
+    margin-left: .5rem;
 }
 
 .consulta .botao-excluir:hover {
