@@ -1,0 +1,33 @@
+<section class="container editar-consulta">
+    <header class="header">
+        <h2>Editar consulta:</h2>
+    </header>
+
+    <form [formGroup]="consultaForm" (ngSubmit)="editarConsulta()">
+        <label for="data_consulta">Data da consulta</label>
+        <input type="date" 
+               class="input" 
+               id="data_consulta" 
+               formControlName="data_consulta">
+        <div *ngIf="consultaForm.get('data_consulta')?.errors?.['dataInvalida'] && consultaForm.get('data_consulta')?.touched">
+            <small class="erro">A data deve ser futura.</small>
+        </div>
+        <div *ngIf="consultaForm.get('data_consulta')?.errors?.['fimDeSemana'] && consultaForm.get('data_consulta')?.touched">
+            <small class="erro">A data não pode ser no fim de semana.</small>
+        </div>
+
+        <label for="horario">Horário da consulta</label>
+        <input type="time" 
+               class="input" 
+               id="horario" 
+               formControlName="horario">
+        <div *ngIf="consultaForm.get('horario')?.errors?.['horarioInvalido'] && consultaForm.get('horario')?.touched">
+            <small class="erro">O horário deve ser entre às 8h e 18h.</small>
+        </div>
+
+        <div class="acoes">
+            <button class="botao" type="submit" [disabled]="consultaForm.invalid">Agendar</button>
+            <button class="botao cancelar" routerLink="/user-home" type="button">Cancelar</button>
+        </div>
+    </form>
+</section>

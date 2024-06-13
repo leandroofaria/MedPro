@@ -1,6 +1,5 @@
 <div class="container">
     <div class="main-body">
-    
         <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
                 <div class="card">
@@ -8,7 +7,7 @@
                         <div class="d-flex flex-column align-items-center text-center">
                             <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                             <div class="mt-3">
-                                <h4>Leandro Gabriel</h4>
+                                <h4>{{userDetails?.nome}}</h4>
                             </div>
                         </div>
                     </div>
@@ -17,14 +16,22 @@
             <div class="col-md-8">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <!-- Conteúdo do perfil do paciente -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <button (click)="toggleEdit()" id="btn-edit">Editar Perfil</button>
+                                <button *ngIf="editing" (click)="updateUserProfile()" id="btn-confirm">Confirmar Edições</button>
+                                <button class="btn" id="delete-btn" (click)="deleteUserProfile()">Excluir</button>
+                            </div>
+                        </div>
+                        <!-- PACIENTE -->
                         <div *ngIf="userType === 'paciente'">
                             <div class="row">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Nome</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{userDetails.nome}}
+                                    <span *ngIf="!editing">{{ userDetails?.nome }}</span>
+                                    <input *ngIf="editing" type="text" [(ngModel)]="updatedUserDetails.nome">
                                 </div>
                             </div>
                             <hr>
@@ -33,7 +40,8 @@
                                     <h6 class="mb-0">Email</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{userDetails.email}}
+                                    <span *ngIf="!editing">{{ userDetails?.email }}</span>
+                                    <input *ngIf="editing" type="email" [(ngModel)]="updatedUserDetails.email">
                                 </div>
                             </div>
                             <hr>
@@ -42,7 +50,8 @@
                                     <h6 class="mb-0">Telefone</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{userDetails.telefone}}
+                                    <span *ngIf="!editing">{{userDetails?.telefone}}</span>
+                                    <input *ngIf="editing" type="tel" [(ngModel)]="updatedUserDetails.telefone">
                                 </div>
                             </div>
                             <hr>
@@ -51,7 +60,8 @@
                                     <h6 class="mb-0">CPF</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{userDetails.cpf}}
+                                    <span *ngIf="!editing">{{userDetails?.cpf}}</span>
+                                    <input *ngIf="editing" type="text" [(ngModel)]="updatedUserDetails.cpf">
                                 </div>
                             </div>
                             <hr>
@@ -60,24 +70,20 @@
                                     <h6 class="mb-0">Endereço</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{userDetails.endereco}}
+                                    <span *ngIf="!editing">{{userDetails?.endereco}}</span>
+                                    <input *ngIf="editing" type="text" [(ngModel)]="updatedUserDetails.endereco">
                                 </div>
                             </div>
                             <hr>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <a class="btn" id="edit-btn" target="__blank" href="">Editar</a>
-                                </div>
-                            </div>
                         </div>
-                        <!-- Conteúdo do perfil do médico -->
                         <div *ngIf="userType === 'medico'">
                             <div class="row">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Nome</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{userDetails.nome}}
+                                    <span *ngIf="!editing">{{ userDetails?.nome }}</span>
+                                    <input *ngIf="editing" type="text" [(ngModel)]="updatedUserDetails.nome">
                                 </div>
                             </div>
                             <hr>
@@ -86,7 +92,8 @@
                                     <h6 class="mb-0">Especialidade</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{userDetails.especialidade}}
+                                    <span *ngIf="!editing">{{ userDetails?.especialidade }}</span>
+                                    <input *ngIf="editing" type="text" [(ngModel)]="updatedUserDetails.especialidade">
                                 </div>
                             </div>
                             <hr>
@@ -95,7 +102,8 @@
                                     <h6 class="mb-0">Email</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{userDetails.email}}
+                                    <span *ngIf="!editing">{{ userDetails?.email }}</span>
+                                    <input *ngIf="editing" type="email" [(ngModel)]="updatedUserDetails.email">
                                 </div>
                             </div>
                             <hr>
@@ -104,7 +112,8 @@
                                     <h6 class="mb-0">Telefone</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{userDetails.telefone}}
+                                    <span *ngIf="!editing">{{userDetails?.telefone}}</span>
+                                    <input *ngIf="editing" type="tel" [(ngModel)]="updatedUserDetails.telefone">
                                 </div>
                             </div>
                             <hr>
@@ -113,7 +122,8 @@
                                     <h6 class="mb-0">CRM</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{userDetails.crm}}
+                                    <span *ngIf="!editing">{{ userDetails?.crm }}</span>
+                                    <input *ngIf="editing" type="number" [(ngModel)]="updatedUserDetails.crm">
                                 </div>
                             </div>
                             <hr>
@@ -122,15 +132,11 @@
                                     <h6 class="mb-0">Endereço</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    {{userDetails.endereco}}
+                                    <span *ngIf="!editing">{{ userDetails?.endereco }}</span>
+                                    <input *ngIf="editing" type="text" [(ngModel)]="updatedUserDetails.endereco">
                                 </div>
                             </div>
                             <hr>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <a class="btn" id="edit-btn" target="__blank" href="">Editar</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

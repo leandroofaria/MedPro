@@ -32,7 +32,7 @@ label {
     margin-right: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #6c63ff;
     color: #fff;
     cursor: pointer;
 }
@@ -43,9 +43,10 @@ label {
     text-align: center;
 }
 
-.mensagem__erro {
-    font-size: 12px;
-    margin-left: 5px;
-    color: red;
-    margin-bottom: 20px;
+.erro {
+    color: #e43f3f;
+}
+
+.cancelar {
+    background-color: #e43f3f;
 }

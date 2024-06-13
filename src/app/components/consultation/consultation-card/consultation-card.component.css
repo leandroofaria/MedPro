@@ -36,7 +36,7 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 1rem;
-    margin-right: 10px; /* Adicionei margem à direita para criar espaçamento */
+    margin-left: .5rem;
 }
 
 .consulta .botao-excluir:hover {
@@ -44,16 +44,16 @@
 }
 
 .consulta .botao-editar {
-    background-color: #007bff; /* Azul claro */
+    background-color: #6c63ff; /* Azul claro */
     color: #fff;
     border: none;
     padding: 6px 10px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 1rem;
+    margin-left: 10px; /* Adicionei margem à esquerda para criar espaçamento */
 }
 
 .consulta .botao-editar:hover {
-    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+    background-color: #5752d6; /* Azul mais escuro ao passar o mouse */
 }
-

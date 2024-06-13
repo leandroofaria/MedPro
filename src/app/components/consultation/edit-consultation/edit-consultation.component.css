@@ -32,9 +32,13 @@ label {
     margin-right: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #6c63ff;
     color: #fff;
     cursor: pointer;
+}
+
+.cancelar {
+    background-color: #c82333;
 }
 
 /* Estilo para os botões de ação */
