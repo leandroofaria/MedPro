@@ -8,7 +8,6 @@ interface Consulta {
   data: string;
 }
 
-
 @Component({
   selector: 'app-consultation-card',
   templateUrl: './consultation-card.component.html',
@@ -22,6 +21,7 @@ export class ConsultationCardComponent {
     especialidade: '',
     data: ''
   };
+  @Input() userType: string = '';
 
   constructor(private datePipe: DatePipe) {}
 

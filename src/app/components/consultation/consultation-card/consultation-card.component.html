@@ -3,7 +3,9 @@
     <p class="doutor">Doutor (a): {{ consulta.nome }}</p>
     <p class="data">Data: {{ getFormattedDate(consulta.data) }}</p>
     <div class="acoes">
-        <button class="botao-excluir" [routerLink]="['/delete', consulta.id]">Excluir</button>
-        <button class="botao-editar" [routerLink]="['/edit', consulta.id]">Editar</button>
+        <button *ngIf="userType === 'paciente'" class="botao-excluir" [routerLink]="['/delete', consulta.id]">Excluir</button>
+        <button *ngIf="userType === 'paciente'" class="botao-editar" [routerLink]="['/edit', consulta.id]">Editar</button>
+        <button *ngIf="userType === 'medico'" class="botao-editar" [routerLink]="['/edit', consulta.id]">Editar</button>
+        <button *ngIf="userType === 'medico'" class="botao-excluir" [routerLink]="['/delete', consulta.id]">Excluir</button>
     </div>
 </div>

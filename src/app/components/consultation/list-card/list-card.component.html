@@ -1,12 +1,12 @@
 <section class="container">
-    <h1>Bem vindo!</h1>
+    <h1>Bem-vindo!</h1>
     <header class="header">
         <h2>Suas consultas:</h2>
-        <button class="botao" routerLink="/schedule">Agendar consulta</button>
+        <button *ngIf="userType === 'paciente'" class="botao" routerLink="/schedule">Agendar consulta</button>
     </header>
     <div class="consultas" *ngIf="listaConsultas.length > 0; else semConsultas">
         <div *ngFor="let consulta of listaConsultas" class="consulta-card">
-            <app-consultation-card [consulta]="consulta"></app-consultation-card>
+            <app-consultation-card [consulta]="consulta" [userType]="userType"></app-consultation-card>
         </div>
     </div>
 </section>

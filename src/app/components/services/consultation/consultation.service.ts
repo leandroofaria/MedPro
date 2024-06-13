@@ -15,6 +15,10 @@ export class ConsultationService {
     return this.http.get(`${this.baseUrl}/consultas/paciente/${id}`);
   }
 
+  getConsultasPorMedico(id: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/consultas/medico/${id}`);
+  }
+
   getMedicos(): Observable<any> {
     return this.http.get(`${this.baseUrl}/medicos`);
   }
