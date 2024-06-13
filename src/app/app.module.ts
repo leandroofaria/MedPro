@@ -16,7 +16,6 @@ import { DoctorRegisterComponent } from './components/register/doctor-register/d
 import { CostumeInterceptor } from './components/services/interceptor/costume.interceptor';
 import { UserHomeComponent } from './components/user-home/user-home.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
-import { EditProfileComponent } from './components/user-profile/edit-profile/edit-profile.component';
 import { DeleteProfileComponent } from './components/user-profile/delete-profile/delete-profile.component';
 import { ConsultationCardComponent } from './components/consultation/consultation-card/consultation-card.component';
 import { ListCardComponent } from './components/consultation/list-card/list-card.component';
@@ -39,7 +38,6 @@ import { DeleteConsultationComponent } from './components/consultation/delete-co
     DoctorRegisterComponent,
     UserHomeComponent,
     UserProfileComponent,
-    EditProfileComponent,
     DeleteProfileComponent,
     ConsultationCardComponent,
     ListCardComponent,
