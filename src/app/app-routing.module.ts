@@ -11,26 +11,27 @@ import { ListCardComponent } from './components/consultation/list-card/list-card
 import { ScheduleConsultationComponent } from './components/consultation/schedule-consultation/schedule-consultation.component';
 import { EditConsultationComponent } from './components/consultation/edit-consultation/edit-consultation.component';
 import { DeleteConsultationComponent } from './components/consultation/delete-consultation/delete-consultation.component';
+import { AuthGuard } from './components/services/auth.guard.service';
 
 const routes: Routes = [
-  
-  {path:'', component: HomeComponent},
-  {path:'about', component: AboutComponent},
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
 
-  {path:'login', component: LoginComponent},
-  {path:'register', component: RegisterComponent},
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
 
-  {path:'doctor-register', component: DoctorRegisterComponent},
+  { path: 'doctor-register', component: DoctorRegisterComponent },
 
-  {path:'user-profile', component: UserProfileComponent},
-  {path:'user-home', component: ListCardComponent},
+  { path: 'user-profile', component: UserProfileComponent, canActivate: [AuthGuard] },
+  { path: 'user-home', component: ListCardComponent, canActivate: [AuthGuard] },
 
-  {path:'schedule', component: ScheduleConsultationComponent},
-  {path:'edit/:id', component: EditConsultationComponent},
-  {path:'delete/:id', component: DeleteConsultationComponent},
+  { path: 'schedule', component: ScheduleConsultationComponent, canActivate: [AuthGuard] },
+  { path: 'edit/:id', component: EditConsultationComponent, canActivate: [AuthGuard] },
+  { path: 'delete/:id', component: DeleteConsultationComponent, canActivate: [AuthGuard] },
 
-
+  { path: '**', redirectTo: '/login', pathMatch: 'full' }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

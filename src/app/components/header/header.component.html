@@ -1,47 +1,47 @@
 <header *ngIf="!isLoggedIn">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-3 col-3">
-                <div class="logo">
-                    <img src="assets/img/MedPro-Logo1.png" class="logo" alt="" routerLink="/">
-                </div>
-            </div>
-            <div class="col-md-9 col-sm-9 col-9 text-end">
-                <div class="menu-icon" (click)="openMenu()">
-                    <i class="{{menu_icon}}"></i>
-                </div>
-                <div class="desktop_menu" [class.mobile_menu]="menuValue">
-                    <ul>
-                        <li routerLink="/">Início</li>
-                        <li routerLink="/about">Sobre Nós</li>
-                        <li routerLink="/register">Cadastrar</li>
-                        <li routerLink="/login">Entrar</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-3 col-sm-3 col-3">
+              <div class="logo">
+                  <img src="assets/img/MedPro-Logo1.png" class="logo" alt="" routerLink="/">
+              </div>
+          </div>
+          <div class="col-md-9 col-sm-9 col-9 text-end">
+              <div class="menu-icon" (click)="openMenu()">
+                  <i class="{{menu_icon}}"></i>
+              </div>
+              <div class="desktop_menu" [class.mobile_menu]="menuValue">
+                  <ul>
+                      <li routerLink="/">Início</li>
+                      <li routerLink="/about">Sobre Nós</li>
+                      <li routerLink="/register">Cadastrar</li>
+                      <li routerLink="/login">Entrar</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
 </header>
 
 <header *ngIf="isLoggedIn">
-    <div class="container">
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-3">
-            <div class="logo">
-              <img src="assets/img/MedPro-Logo1.png" class="logo" alt="" routerLink="/">
-            </div>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-3">
+          <div class="logo">
+            <img src="assets/img/MedPro-Logo1.png" class="logo" alt="" routerLink="/">
           </div>
-          <div class="col-md-9 col-sm-9 col-9 text-end">
-            <div class="profile-icon">
-              <i class="bi bi-calendar" routerLink="/user-home"></i>
-            </div>
-            <div class="profile-icon">
-              <i class="bi bi-person-circle" routerLink="/user-profile"></i>
-            </div>
-            <div class="logout-icon">
-              <i class="bi bi-box-arrow-left"></i>
-            </div>
+        </div>
+        <div class="col-md-9 col-sm-9 col-9 text-end">
+          <div class="profile-icon">
+            <i class="bi bi-calendar" routerLink="/user-home"></i>
+          </div>
+          <div class="profile-icon">
+            <i class="bi bi-person-circle" routerLink="/user-profile"></i>
+          </div>
+          <div class="logout-icon" id="btn-logout" (click)="logout()">
+            <i class="bi bi-box-arrow-left"></i>
           </div>
         </div>
       </div>
+    </div>
 </header>
