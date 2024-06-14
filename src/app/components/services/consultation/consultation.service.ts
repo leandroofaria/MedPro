@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ConsultationService {
-
   private baseUrl = 'http://localhost:8080';
 
   constructor(private http: HttpClient) { }
@@ -37,5 +36,9 @@ export class ConsultationService {
 
   excluirConsulta(id: string): Observable<any> {
     return this.http.delete(`${this.baseUrl}/consultas/${id}`);
+  }
+
+  getPacienteById(id: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/pacientes/${id}`);
   }
 }

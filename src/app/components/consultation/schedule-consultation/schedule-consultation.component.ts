@@ -40,7 +40,7 @@ export class ScheduleConsultationComponent implements OnInit {
     }
 
     const diaSemana = data.getDay();
-    if (diaSemana === 5 || diaSemana === 6) {
+    if (diaSemana === 0 || diaSemana === 6) {
       return { 'fimDeSemana': true };
     }
 
@@ -72,9 +72,10 @@ export class ScheduleConsultationComponent implements OnInit {
       }
 
       const idPaciente = localStorage.getItem('IdUser');
-
+      const nomePaciente = localStorage.getItem('NomeUser'); 
       const dadosAgendamento = {
         idPaciente: idPaciente,
+        nomePaciente: nomePaciente,
         idMedico: formValue.doutor,
         data: `${formValue.data_consulta}T${formValue.horario}`,
         especialidade: medicoSelecionado.especialidade,

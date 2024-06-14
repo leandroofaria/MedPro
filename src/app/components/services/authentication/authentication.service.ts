@@ -15,6 +15,10 @@ export class AuthService {
   }
 
   logout() {
+    // Remover token e outros dados do localStorage
+    localStorage.removeItem('loginToken');
+    localStorage.removeItem('tipo');
+    localStorage.removeItem('IdUser');
     this.isLoggedInSubject.next(false);
   }
 
