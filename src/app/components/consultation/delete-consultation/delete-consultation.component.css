@@ -29,3 +29,40 @@
 #btn-cancelar {
     background-color: #c82333;
 }
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .acoes {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .botao {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .acoes {
+        margin-top: 15px;
+    }
+
+    .botao {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}

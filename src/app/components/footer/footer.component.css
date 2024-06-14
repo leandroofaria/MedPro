@@ -47,28 +47,28 @@ footer {
 /* Responsividade para dispositivos menores */
 @media (max-width: 768px) {
   footer {
-      flex-direction: column; /* Mudando para layout em coluna em telas menores */
-      padding: 15px; /* Reduzindo o padding */
-      font-size: 12px; /* Reduzindo o tamanho da fonte */
+    flex-direction: column; /* Mudando para layout em coluna em telas menores */
+    padding: 15px; /* Reduzindo o padding */
+    font-size: 12px; /* Reduzindo o tamanho da fonte */
   }
   .footer-content {
-      margin-bottom: 10px; /* Adicionando margem inferior para espaçamento */
+    margin-bottom: 10px; /* Adicionando margem inferior para espaçamento */
   }
   .contact-list {
-      flex-direction: column; /* Mudando para layout em coluna para itens da lista */
-      align-items: center; /* Centralizando os itens */
+    flex-direction: column; /* Mudando para layout em coluna para itens da lista */
+    align-items: center; /* Centralizando os itens */
   }
   .contact-list li {
-      margin: 5px 0; /* Ajustando o espaçamento entre os itens */
+    margin: 5px 0; /* Ajustando o espaçamento entre os itens */
   }
 }
 
 @media (max-width: 480px) {
   footer {
-      padding: 10px; /* Reduzindo o padding */
-      font-size: 10px; /* Reduzindo o tamanho da fonte */
+    padding: 10px; /* Reduzindo o padding */
+    font-size: 10px; /* Reduzindo o tamanho da fonte */
   }
   .contact-list a {
-      font-size: 12px; /* Reduzindo o tamanho da fonte */
+    font-size: 12px; /* Reduzindo o tamanho da fonte */
   }
 }

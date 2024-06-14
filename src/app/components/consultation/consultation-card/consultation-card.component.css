@@ -1,38 +1,38 @@
 .consulta {
     background-color: #f8f9fa;
-    padding: 10px; /* Reduzi o padding para diminuir o espaço interno */
-    border-radius: 10px; /* Mantive o raio da borda para um visual suave */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Mantive a sombra para destacar o card */
-    margin-bottom: 10px; /* Reduzi o espaço entre os cards */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
     display: inline-block;
     box-sizing: border-box;
-    min-width: 200px; /* Mantive a largura mínima para melhor legibilidade */
+    min-width: 200px;
     max-width: 100%;
-    margin-right: 10px; /* Reduzi a margem à direita para espaçamento uniforme */
+    margin-right: 10px;
 }
 
 .consulta .especialidade {
-    margin: 5px 0; /* Reduzi o espaçamento da especialidade */
-    font-size: 1.2em; /* Mantive o tamanho da fonte da especialidade */
-    font-weight: bold; /* Mantive o negrito para destacar a especialidade */
+    margin: 5px 0;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .consulta .doutor,
 .consulta .data,
 .consulta .horario {
-    margin: 3px 0; /* Reduzi o espaçamento das outras informações */
+    margin: 3px 0;
 }
 
 .consulta .acoes {
     text-align: right;
-    margin-top: 5px; /* Reduzi o espaço entre o conteúdo e os botões */
+    margin-top: 5px;
 }
 
 .consulta .botao-excluir {
     background-color: #dc3545;
     color: #fff;
     border: none;
-    padding: 6px 10px; 
+    padding: 6px 10px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 1rem;
@@ -44,16 +44,57 @@
 }
 
 .consulta .botao-editar {
-    background-color: #6c63ff; /* Azul claro */
+    background-color: #6c63ff;
     color: #fff;
     border: none;
     padding: 6px 10px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 1rem;
-    margin-left: 10px; /* Adicionei margem à esquerda para criar espaçamento */
+    margin-left: 10px;
 }
 
 .consulta .botao-editar:hover {
-    background-color: #5752d6; /* Azul mais escuro ao passar o mouse */
+    background-color: #5752d6;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .consulta {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .consulta .acoes {
+        text-align: center;
+    }
+
+    .consulta .botao-excluir,
+    .consulta .botao-editar {
+        display: inline-block;
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .consulta {
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .consulta .especialidade {
+        font-size: 1em;
+    }
+
+    .consulta .acoes {
+        text-align: center;
+    }
+
+    .consulta .botao-excluir,
+    .consulta .botao-editar {
+        padding: 5px 8px;
+        font-size: 0.9em;
+    }
 }

@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-bottom: 14rem;
+    margin-bottom: 14rem; /* Ajuste o margin-bottom conforme necessário para o espaçamento desejado */
 }
 
 .header {
@@ -32,15 +32,46 @@ h1, h2 {
 .consulta-card {
     border-radius: 5px;
     padding: 15px;
+    width: calc(33.33% - 20px); /* Ajuste a largura dos cards conforme necessário */
+    margin: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 .sem-consultas {
     width: 100%;
     margin: 10px;
+    text-align: center;
 }
 
 .sem-consultas p {
     font-size: 18px;
     color: #555;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1200px) {
+    .consulta-card {
+        width: calc(50% - 20px); /* Duas colunas em telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-bottom: 8rem; /* Reduz o margin-bottom para dispositivos menores */
+    }
+
+    .consulta-card {
+        width: calc(50% - 20px); /* Duas colunas em telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin-bottom: 4rem; /* Reduz ainda mais o margin-bottom para dispositivos muito pequenos */
+    }
+
+    .consulta-card {
+        width: calc(100% - 20px); /* Um card por linha em telas muito pequenas */
+    }
 }

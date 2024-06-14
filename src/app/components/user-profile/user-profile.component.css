@@ -3,61 +3,62 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  .main-body {
+}
+
+.main-body {
     padding: 15px;
-  }
-  
-  .row {
+}
+
+.row {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
-  }
-  
-  .col-md-4,
-  .col-md-8 {
+}
+
+.col-md-4,
+.col-md-8 {
     padding: 0 15px;
     margin-bottom: 20px;
-  }
-  
-  .card {
+    flex: 0 0 calc(33.33% - 30px); /* Colunas ocupando 33.33% do espaço com margem */
+}
+
+.card {
     background-color: whitesmoke;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 15px;
-  }
-  
-  .card-body {
+}
+
+.card-body {
     padding: 15px;
-  }
-  
-  .profile-image-section {
+}
+
+.profile-image-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-  
-  .profile-image {
+}
+
+.profile-image {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-  }
-  
-  .image-upload-section {
+}
+
+.image-upload-section {
     margin-top: 15px;
-  }
-  
-  .button-section {
+}
+
+.button-section {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-  }
-  
-  #btn-edit,
-  #btn-confirm,
-  #delete-btn {
+}
+
+#btn-edit,
+#btn-confirm,
+#delete-btn {
     background: #6c63ff;
     color: white;
     font-weight: 500;
@@ -65,38 +66,52 @@
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  #btn-confirm {
+}
+
+#btn-confirm {
     background: #4CAF50;
-  }
-  
-  #delete-btn {
+}
+
+#delete-btn {
     background: #e43f3f;
-  }
-  
-  .row {
+}
+
+.row {
     margin-bottom: 10px;
-  }
-  
-  .col-label {
+}
+
+.col-label {
     font-weight: bold;
     flex: 1;
-  }
-  
-  .col-value {
+}
+
+.col-value {
     flex: 2;
-  }
-  
-  hr {
+}
+
+hr {
     border: 0;
     border-top: 1px solid #ccc;
     margin: 10px 0;
-  }
+}
 
-  #escolher-arquivo {
+#escolher-arquivo {
     display: flex;
-    margin: .7rem;
-    
-  }
-  
+    margin: 0.7rem;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 992px) {
+    .col-md-4,
+    .col-md-8 {
+        flex: 0 0 calc(50% - 30px); /* Colunas ocupando 50% do espaço com margem em telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-4,
+    .col-md-8 {
+        flex: 0 0 100%; /* Colunas ocupando 100% do espaço em telas menores */
+        padding: 0;
+    }
+}
