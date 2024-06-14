@@ -57,6 +57,10 @@ header {
 }
 
 @media screen and (min-width: 128px) and (max-width: 900px) {
+  header {
+    height: 10vh; /* Diminuir a altura do header em dispositivos móveis */
+    padding: 5px 10px; /* Ajustar o padding para se ajustar ao novo tamanho */
+  }
   .desktop_menu {
     position: fixed !important;
     right: -280px;

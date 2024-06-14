@@ -36,7 +36,7 @@
 
 .home-text p {
     margin-bottom: 4rem;
-    font-size: 1REM;
+    font-size: 1rem;
 }
 
 .home-btn {
@@ -47,6 +47,7 @@
     font-weight: 700;
     transition: all 0.5s;
     margin-right: 1rem;
+    display: inline-block;
 }
 
 .home-btn:hover {
@@ -60,25 +61,30 @@
 }
 
 @media (max-width: 785px) {
-    .home-img {
-        display: none; /* Oculta a imagem em dispositivos móveis */
+
+    .home {
+        height: 120vh;
     }
-    .navigation{
+
+    .home-img {
+        display: none;
+    }
+    .navigation {
         padding: 18px 20px;
     }
-    .menu{
+    .menu {
         display: block;
     }
-    .menu.ativo .bar:nth-child(1){
+    .menu.ativo .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
     .menu.ativo .bar:nth-child(2) {
         opacity: 0;
     }
-    .menu.ativo .bar:nth-child(3){
+    .menu.ativo .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-    .nav-menu{
+    .nav-menu {
         position: fixed;
         right: -100%;
         top: 70px;
@@ -89,32 +95,66 @@
         gap: -10px;
         transition: 0.3s;
     }
-    .nav-menu.ativo{
+    .nav-menu.ativo {
         right: 0;
     }
-    .nav-item{
+    .nav-item {
         margin: 16px 0;
     }
-    /*main*/
-    .home{
+    /* main */
+    .home {
         padding: 100px 2%;
         flex-direction: column;
         text-align: center;
         overflow: hidden;
-        gap: 5rem;
+        gap: 2rem; /* Ajustado para diminuir a lacuna */
     }
-    .home .text-h4{
-        font-size: 15px;
+    .home-text {
+        margin-right: 0; /* Remove a margem à direita para centralizar o texto */
+        margin-bottom: 2rem; /* Adiciona margem inferior para espaçamento */
     }
-    .home .text-h1{
-        font-size: 2.5rem;
-        line-height: 3rem;
+    .home-text .text-h4 {
+        font-size: 1.75rem; /* Aumentando o tamanho do texto h4 */
     }
-    .home p{
-        font-size: 15px;
+    .home-text .text-h1 {
+        font-size: 3.5rem; /* Aumentando o tamanho do texto h1 */
+        line-height: 4rem;
     }
-    .home-img{
+    .home-text p {
+        font-size: 1.25rem; /* Aumentando o tamanho do parágrafo */
+        margin-bottom: 2rem; /* Ajustando margem inferior para espaçamento */
+    }
+    .home-btn {
+        margin-bottom: 1rem; /* Adiciona margem inferior para espaçamento entre botões */
+        width: 80%; /* Ajusta a largura dos botões em telas menores */
+    }
+    .home-img {
         width: 125%;
+    }
+}
+
+@media (min-width: 786px) and (max-width: 1024px) {
+    .home {
+        padding: 50px 5%;
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+    .home-text .text-h4 {
+        font-size: 2rem; /* Aumentando o tamanho do texto h4 */
+    }
+    .home-text .text-h1 {
+        font-size: 4rem; /* Aumentando o tamanho do texto h1 */
+        line-height: 4.5rem;
+    }
+    .home-text p {
+        font-size: 1.5rem; /* Aumentando o tamanho do parágrafo */
+    }
+    .home-btn {
+        padding: 20px 60px; /* Aumentando o padding dos botões */
+        font-size: 1.2rem; /* Aumentando o tamanho da fonte dos botões */
+        width: auto; /* Ajustando a largura dos botões */
+    }
+    .home-img img {
+        width: 75vh; /* Ajustando a largura da imagem */
     }
 }
 
@@ -124,5 +164,15 @@
     }
     .home-text {
         margin-right: 0; /* Remove a margem à direita para centralizar o texto */
+    }
+    .home-text .text-h4 {
+        font-size: 1.75rem; /* Aumentando o tamanho do texto h4 */
+    }
+    .home-text .text-h1 {
+        font-size: 3.5rem; /* Aumentando o tamanho do texto h1 */
+        line-height: 4rem;
+    }
+    .home-text p {
+        font-size: 1.4rem; /* Aumentando o tamanho do parágrafo */
     }
 }
